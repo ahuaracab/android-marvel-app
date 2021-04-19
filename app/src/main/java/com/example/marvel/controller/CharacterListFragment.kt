@@ -48,7 +48,7 @@ class CharacterListFragment : Fragment() {
                 }
 
                 override fun onFailure(call: Call<CharacterData>, t: Throwable) {
-                    // Todo poner un toast
+
                 }
             })
         }
@@ -58,7 +58,7 @@ class CharacterListFragment : Fragment() {
         characters?.let {
             val adapter = RVCharacterAdapter(it){
                 val intent = Intent(context, ComicActivity::class.java)
-            //    intent.putExtra("VARIABLE_ID", it)
+                intent.putExtra("VARIABLE_ID", it)
                 startActivity(intent)
             }
 

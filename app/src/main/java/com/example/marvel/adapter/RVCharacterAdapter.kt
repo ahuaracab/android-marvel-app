@@ -32,11 +32,6 @@ class RVCharacterAdapter(
         fun bind(character: Character) {
             itemView.findViewById<ImageView>(R.id.img_arrow).setOnClickListener {
                 onComicClick(character)
-                //val txtComicName = itemView.findViewById<TextView>(R.id.txt_comic_name)
-               // val txtComicUrl = itemView.findViewById<TextView>(R.id.txt_comic_url)
-
-                //txtComicName.text = character.comics.items.name
-                //txtComicUrl.text = character.comics.items.resourceURI
 
             }
             val txtCharacterName = itemView.findViewById<TextView>(R.id.txt_character_name)

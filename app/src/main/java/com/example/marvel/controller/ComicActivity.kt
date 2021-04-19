@@ -1,10 +1,10 @@
 package com.example.marvel.controller
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.marvel.R
+import androidx.appcompat.app.AppCompatActivity
 import com.example.marvel.databinding.ActivityComicBinding
-import com.example.marvel.databinding.ActivityMarvelBinding
+import com.example.marvel.model.Character
+
 
 class ComicActivity : AppCompatActivity() {
     private lateinit var binding: ActivityComicBinding
