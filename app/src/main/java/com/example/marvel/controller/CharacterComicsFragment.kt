@@ -35,7 +35,7 @@ class CharacterComicsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val service = MarvelApiService(config = ClientConfig())
 
-        CoroutineScope(Dispatchers.IO).launch {
+        CoroutineScope(Dispatchers.Main).launch {
             service.getCharacterList().enqueue(object : Callback<CharacterData> {
                 // 200 - 300
                 override fun onResponse(
@@ -59,7 +59,7 @@ class CharacterComicsFragment : Fragment() {
             val adapter = RVComicAdapter(it) {
 
                 val intent = Intent(context, ComicActivity::class.java)
-                //intent.putExtra("VARIABLE_ID", it)
+                intent.putExtra("VARIABLE_ID", it)
                 startActivity(intent)
             }
 

@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".controller.ComicActivity">
 
+    <fragment
+        android:id="@+id/fragment_comics"
+        android:name="com.example.marvel.controller.CharacterComicsFragment"
+        class="com.example.marvel.controller.CharacterComicsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
