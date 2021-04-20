@@ -1,10 +1,11 @@
 package com.example.marvel.controller
 
+import RVComicAdapter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.marvel.databinding.ActivityComicBinding
 import com.example.marvel.model.Character
-import com.example.marvel.model.Items
 
 
 class ComicActivity : AppCompatActivity() {
@@ -13,7 +14,16 @@ class ComicActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityComicBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val comic = intent.getSerializableExtra("VARIABLE_ID") as List<Items>
+        val character = intent.getSerializableExtra("VARIABLE_ID") as Character
+        print(character)
 
+        binding.rvComics.adapter = RVComicAdapter(character.comics.items) {
+
+        }
+        binding.rvComics.layoutManager = LinearLayoutManager(
+            this,
+            LinearLayoutManager.VERTICAL,
+            false
+        )
     }
 }
